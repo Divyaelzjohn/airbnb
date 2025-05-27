@@ -5,14 +5,14 @@
 body{
     line-break: strict;
     font-family: 'normal';
-    font-size: 0.875rem;
+    font-size: 0.875rem; 
     line-height: 1.43;
     color: #2222;
-    background-color:#fff;
+    /* background-color:#fff; */
     margin: 0px;
     height: 100%;
     box-sizing: border-box;
-    font-synthesis: none;
+    /* font-synthesis: none; */
 }
 .full_body{
     min-height: 100dvh;
@@ -301,6 +301,7 @@ body{
     grid-template-columns: minmax(0px, 1fr);
     grid-template-areas: "header" "scroller" "footer";
     display: grid;
+    box-sizing: border-box;
 }
 .heading{
     place-self: auto;
@@ -320,18 +321,20 @@ body{
 .head1{
     margin-top: 0px !important;
     margin-bottom: 0px !important;
-    font-size: 18px !important;
-    font-weight: 600;
+    font-size: unset !important;
+    font-weight: unset !important;
 }
 .head2{
     transition: box-shadow 0.2s cubic-bezier(0.2,0,0,1),transform 0.1s cubic-bezier(0.2,0,0,1);
     border-radius: 8px;
     text-align: inherit;
-    font-size: 16px;
+    font-size: inherit;
     line-height: inherit;
-    font-weight: 600;
+    font-weight: inherit;
     font-family: inherit;
+    background: transparent;
     border: none;
+    letter-spacing: normal;
     margin: 0;
     cursor: pointer;
     padding: 0;
@@ -342,35 +345,32 @@ body{
     text-decoration: none;
     outline: none;
     position: relative;
-    font: inherit;
 }
 .head3{
    padding-inline-end: 12px;
-    font-weight: 600;
+    font-weight: 600 !important;
     line-height: 1.5rem;
-    font-size:16px;
+    font-size: 1.125rem !important;
     align-items: baseline;
     text-wrap: pretty;
     letter-spacing: -0.01125rem;
+    box-sizing: border-box;
     display: inline-block;
-    color: #222222;
+    color: black;
     text-align: inherit;
     font-family: inherit;
     cursor: pointer;
     font: inherit;
-    width: 257px;
+    display: flex;
+    margin-top: -19px;
+}
+.txt{
+    display: inline-block;
 }
 .arrow{
     margin-inline-start: 2px;
     display: inline-block;
     font-weight: 600;
-}
-.arrow img{
-    display: block;
-    fill: none;
     height: 12px;
     width: 12px;
-    stroke: currentColor;
-    stroke-width: 5.33333;
-    overflow: visible;
 }
