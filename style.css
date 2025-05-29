@@ -299,8 +299,8 @@ body{
 }
 .box1_mrg{
     font-size: 14px;
-    grid-template-rows: 62px 186.562px 0px;
-    grid-template-columns: 320px;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
     grid-template-areas: 
         "header"
         "scroller" 
@@ -503,7 +503,6 @@ body{
     width:32px;
     height:32px;
     pointer-events: auto;
-    display: flex;
 }
 .like_btn{
     transition:none;
@@ -522,6 +521,18 @@ body{
     outline: none;
     cursor: pointer;
     font:inherit;
+}
+.like_btn img{
+    will-change: transform;
+    display: inline-block;
+    fill: rgba(0, 0, 0, 0.5);
+    height: 24px;
+    width: 24px;
+    stroke: #FFF;
+    stroke-width: 2;
+    overflow: visible;
+    transition: transform 0.1s cubic-bezier(0.2,0,0,1);
+    text-decoration: inherit;
 }
 .pic_middle{
     justify-self: flex-start;
@@ -600,4 +611,91 @@ body{
     width:8px;
     height:8px;
     fill:currentcolor;
+}
+.inspiration{
+    background: #f7f7f7;
+    box-sizing: border-box;
+}
+.insp_padding{
+    padding: 16px 48px;
+    margin-inline: auto;
+    padding-block: 48px;
+    max-width: 1920px;
+}
+.insp_padding >*:first-child{
+    grid-column-start: 2 ;
+}
+.inspsubhead{
+    position: relative;
+}
+.inspmrg{
+    margin-right: -12px;
+    margin-left: -12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.inspbrd{
+    overflow:visible;
+    display:flex;
+    white-space:nowrap;
+    box-sizing: border-box;
+}
+.unique{
+    margin-left: -10px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    margin-right:6px;
+    cursor:default;
+    line-height:1.125rem;
+    font-size:0.875rem;
+    padding: 10px;
+    border-radius:8px;
+    font-weight:500;
+    font-family: 'normal';
+    background: transparent;
+    border:none;
+    letter-spacing:normal;
+    color:#2222;
+    outline:none;
+    position:relative;
+}
+.brrr{
+    background-color:#DDDD;
+    height: 1px;
+    box-sizing: border-box;
+}
+.sec-1{
+    padding-top:32px;
+    box-sizing:border-box;
+}
+.ull1{
+    grid-template-columns: repeat(2,2),minmax(0, 1fr);
+    row-gap: 24px;
+    column-gap: 8px;
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:grid;
+}
+.litxt{
+    line-height:1.125rem;
+    font-size:0.875rem;
+    font-family:'normal';
+    flex-direction:column;
+    letter-spacing:normal;
+    text-overflow:ellipsis;
+    color:#6A6A6A;
+    display:flex;
+    white-space:nowrap;
+    overflow:hidden;
+    text-decoration:none;
+}
+.yurtxt{
+    font-family:'normal';
+    letter-spacing: normal;
+    color:#2222;
+    white-space:nowrap;
+    overflow:hidden;
 }
